@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+</head>
+
+<body>
+
+    <div class="g-recaptcha" data-sitekey="your_site_key"></div>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit" async defer></script>
+    <script>
+        setTimeout(() => {
+
+            var iframe = document.querySelector('.g-recaptcha');
+            var frameData = iframe.childNodes[0].childNodes[0].childNodes[0]
+                // console.log(frameData);
+                // 
+            var theFrame = document.getElementsByTagName("iframe")[0];
+            var theFrameDocument = theFrame.contentDocument || theFrame.contentWindow.document;
+            console.log(theFrameDocument);
+            // var button = theFrameDocument.getElementById("mybutton");
+            // http://127.0.0.1:5500/
+            // document.getElementById('iframe_id').contentWindow.document.body.innerHTML;
+            // frameContent = document.getElementsByTagName('iframe')
+            // frameContentData = $(frameContent[0]).contents().prevObject[0]
+
+            // console.log(frameContentData);
+            // console.log(frameContentData.find("body"));
+            // contents().find("body").html()
+            // console.log(frameContent[0].contentWindow.document);
+            // $("#id_description_iframe").contents().find("body").html()
+            // var FrameBody = $(frameData).contents()
+            // console.log(FrameBody);
+
+            // console.log(iframe.childNodes[0].childNodes[0].childNodes[0].Document);
+            // console.log(iframe.childNodes[0].childNodes[0].childNodes[0].document);
+        }, 2000);
+
+        // let divData = document.getElementsByClassName("rc-anchor-content")
+        // console.log(divData[0]);
+    </script>
+
+</body>
+
+</html>
