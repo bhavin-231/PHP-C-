@@ -1,0 +1,114 @@
+    @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        background-color: #f5f5f9;
+        color: #fff;
+        font-family: 'Muli', sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        overflow: hidden;
+        margin: 0;
+    }
+
+    .container {
+        background-color: white;
+        box-shadow: 0 0 10px 2px #00000033;
+        padding: 20px 40px;
+        border-radius: 5px;
+    }
+
+    .container h1 {
+        text-align: center;
+        margin-bottom: 30px;
+        color: #696cff;
+    }
+
+    .container a {
+        text-decoration: none;
+        color: lightblue;
+    }
+
+    .btn {
+        cursor: pointer;
+        display: inline-block;
+        width: 100%;
+        background: #696cff;
+        padding: 15px;
+        font-family: inherit;
+        font-size: 16px;
+        border: 0;
+        border-radius: 5px;
+        color: white;
+    }
+
+    .btn:focus {
+        outline: 0;
+    }
+
+    .btn:active {
+        transform: scale(0.98);
+    }
+
+    .text {
+        margin-top: 30px;
+        color: black;
+        text-align: center;
+    }
+
+    .text a {
+        color: #696cff;
+    }
+
+    .form-control {
+        position: relative;
+        margin: 20px 0 40px;
+        width: 300px;
+    }
+
+    .form-control input {
+        background-color: transparent;
+        border: 0;
+        border-bottom: 2px rgb(0 0 0 / 10%) solid;
+        display: block;
+        width: 100%;
+        padding: 15px 0;
+        font-size: 18px;
+        color: black;
+    }
+
+    .form-control input::placeholder {
+        color: black;
+    }
+
+    .form-control input:focus,
+    .form-control input:valid {
+        outline: 0;
+        border-bottom-color: #696cff;
+    }
+
+    .form-control label {
+        position: absolute;
+        top: 15px;
+        left: 0;
+        pointer-events: none;
+        color: rgba(0, 0, 0, 0.253);
+    }
+
+    .form-control label span {
+        display: inline-block;
+        font-size: 18px;
+        min-width: 5px;
+        transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    }
+
+    .form-control input:focus+label span,
+    .form-control input:valid+label span {
+        color: #696cff;
+        transform: translateY(-30px);
+    }
